@@ -14,10 +14,10 @@ export type Command<T extends CommandType = CommandType> = {
 }
 
 export function executable<T extends CommandType>(command: Command<T>, game: Game) {
-  return Commands[command.type](command.props).executable(game);
+  return Commands[command.type](command.props as undefined).executable(game);
 }
 
 export function execute<T extends CommandType>(command: Command<T>, game: Game) {
-  return Commands[command.type](command.props).execute(game);
+  return Commands[command.type](command.props as undefined).execute(game);
 }
 
