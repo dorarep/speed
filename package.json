@@ -1,5 +1,5 @@
 {
-  "name": "speed",
+  "name": "ox-game",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "firebase": "^7.16.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "ulid": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.23",
