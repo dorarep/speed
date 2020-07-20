@@ -1,8 +1,8 @@
-export const initialGame: Game = {
+export const initialGame: () => Game = () => ({
   state: 'pending',
   players: [],
   board: [['empty', 'empty', 'empty'], ['empty', 'empty', 'empty'], ['empty', 'empty', 'empty']]
-};
+});
 
 export const isMyTurn = (game: Game, userId: string) =>
   (game.players[0].userId === userId && game.state === 'player1') || (game.players[1].userId === userId && game.state === 'player2');

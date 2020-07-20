@@ -13,7 +13,7 @@ export const appendCommand = (roomId: string, command: Command) => commandsColle
 });
 
 export const subscribeGame = (roomId: string, update: (game: Game) => void) => {
-  let cachedGame = initialGame;
+  let cachedGame = initialGame();
 
   commandsCollectionPath(roomId).onSnapshot(
     querySnapshot => {

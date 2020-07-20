@@ -3,7 +3,7 @@ import {subscribeGame} from "../../../infrastructures/repositories/game-reposito
 import {initialGame} from "../../../domains/models/game";
 
 export const useGame = (roomId: string) => {
-  const [game, setGame] = useState<Game>(initialGame);
+  const [game, setGame] = useState<Game>(initialGame());
 
   useEffect(() => roomId && subscribeGame(roomId, setGame), [roomId, setGame]);
   console.log(game);
